@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+@theme {
+  --color-green: #00FA9A;
+  --color-palegreen: #98FB98;
+  --color-darkgray: #232429;
+  
+  --font-family-sans: "Inter", sans-serif;
+  --font-family-orbitron: "Orbitron", sans-serif;
+}
+
+/* Direct font application */
+.font-orbitron {
+  font-family: "Orbitron", monospace !important;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
