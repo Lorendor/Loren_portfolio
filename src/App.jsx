@@ -7,7 +7,7 @@ const App = () => {
   return (
     <main className='bg-darkgray'>
       <Badge/>
-      <div className="pb-20">
+      <div className="pb-5">
       <Navbar />
       </div>
       <Hero />

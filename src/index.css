@@ -6,14 +6,33 @@
   --color-green: #00FA9A;
   --color-palegreen: #98FB98;
   --color-darkgray: #232429;
+  --color-darkblue: #003153;
+  --color-blackish: #002244;
   
   --font-family-sans: "Inter", sans-serif;
   --font-family-orbitron: "Orbitron", sans-serif;
 }
 
-/* Direct font application */
 .font-orbitron {
   font-family: "Orbitron", monospace !important;
   font-weight: 700;
   letter-spacing: 2px;
+}
+
+/* Custom animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.3s ease-in-out;
 }

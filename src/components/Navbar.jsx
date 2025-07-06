@@ -74,7 +74,7 @@ const Navbar = () => {
   return (
     <nav 
       ref={navRef}
-      className="fixed bottom-8 md:bottom-8 left-1/2 transform -translate-x-1/2 px-3 md:px-6 py-1 rounded-full bg-black/90 backdrop-blur-md border border-white/10 z-50 shadow-xl"
+      className="fixed bottom-8 md:bottom-8 left-1/2 transform -translate-x-1/2 px-3 md:px-6 py-1 rounded-full bg-black/30 backdrop-blur-md border border-white/10 z-50 shadow-xl"
       onMouseMove={handleMouseMove}
     >
       <div className="flex justify-between items-center gap-4 md:gap-8 mx-auto py-1">
@@ -90,7 +90,7 @@ const Navbar = () => {
               transition-all duration-300 ease-out
               ${activeTab === tab.id 
                 ? 'text-black bg-green-400 shadow-md' 
-                : 'text-white hover:text-green-400 hover:bg-white/5'
+                : 'text-white hover:gradient-to-r from-green-400 to-green-500 hover:bg-white/5'
               }
               ${hoveredTab === tab.id ? 'scale-105' : 'scale-100'}
             `}
