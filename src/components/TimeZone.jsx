@@ -40,20 +40,20 @@ const CroatiaTimezone = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative h-8 w-20 flex items-center justify-center">
+      <div className="relative h-10 w-24 flex items-center justify-center">
         
-        <div className={`absolute inset-0 rounded-md bg-gradient-to-br ${isHovered ? 'from-blue-500 to-green-500' : 'from-blue-600/80 to-green-600/80'} shadow-md transition-all duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`}></div>
+        <div className={`absolute inset-0 rounded-md bg-gradient-to-br ${isHovered ? 'bg-green' : 'bg-darkgray/50'} shadow-md transition-all duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`}></div>
         
         <div className="relative z-10 text-center">
-          <div className={`text-xs font-bold ${isHovered ? 'text-white' : 'text-white/90'} transition-colors duration-300`}>
+          <div className={`text-xs font-bold ${isHovered ? 'text-black' : 'text-white/90'} transition-colors duration-300`}>
             {formatTime(currentTime)}
           </div>
-          <div className={`text-[0.6rem] ${isHovered ? 'text-white' : 'text-white/70'} transition-colors duration-300`}>
+          <div className={`text-[0.6rem] ${isHovered ? 'text-black' : 'text-white/70'} transition-colors duration-300`}>
             {formatDate(currentTime)}
           </div>
         </div>
         
-        <div className={`absolute inset-0 rounded-md border-2 ${isHovered ? 'border-green-400' : 'border-white/30'} transition-all duration-500`}></div>
+        <div className={`absolute inset-0 rounded-md border-2 ${isHovered ? 'border-black' : 'border-green'} transition-all duration-500`}></div>
       </div>
 
       <span className="text-white/80 text-sm"> - </span>

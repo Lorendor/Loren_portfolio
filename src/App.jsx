@@ -6,6 +6,7 @@ import Work from './components/Work'
 import TechTree from './components/TechTree'
 import AboutUs from './components/About'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 const projects = [
   {
@@ -44,20 +45,23 @@ const App = () => {
       <Navbar />
       </div>
       <Hero />
-      <div className="mt-10">
+      <div className="pt-10">
         <AboutUs/>
       </div>
-      <div className="mt-30">
+      <div className="pt-30">
         <Marquee words={["About me", "Contact"]} />
       </div>
-      <div className="mt-10">
+      <div className="pt-10">
         <Work projects={projects}/>
       </div>
-      <div className="mt-10">
+      <div className="pt-10">
         <TechTree/>
       </div>
-      <div className="mt-10">
+      <div className="pt-50">
         <Contact/>
+      </div>
+      <div className="pt-50 pb-30">
+        <Footer/>
       </div>
     </main>
   )

@@ -20,10 +20,10 @@ const Hero = () => {
             I develop visually appealing and user-friendly websites with a strong focus on accessibility, responsiveness and performance.
           </p>
           <div className='flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center lg:justify-start'>
-            <button className='px-6 sm:px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-full font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25 text-sm sm:text-base'>
+            <button className='px-6 sm:px-8 py-3 bg-gradient-to-r from-green-500 to-green-500 text-black rounded-full font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25 text-sm sm:text-base'>
               View My Work
             </button>
-            <button className='px-6 sm:px-8 py-3 border-2 border-green-400/30 text-green-100 rounded-full font-semibold hover:border-green-400/50 hover:text-white hover:bg-green-900/30 transition-all duration-300 text-sm sm:text-base'>
+            <button className='px-6 sm:px-8 py-3 border-2 border-green-400/30 text-green-100 rounded-full font-semibold hover:border-green-400/50 hover:text-white hover:bg-green-700/30 transition-all duration-300 text-sm sm:text-base'>
               Get In Touch
             </button>
           </div>

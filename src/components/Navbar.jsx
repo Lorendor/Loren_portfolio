@@ -89,7 +89,7 @@ const Navbar = () => {
               relative flex flex-col items-center font-medium px-2 md:px-4 py-1 md:py-2 rounded-full 
               transition-all duration-300 ease-out
               ${activeTab === tab.id 
-                ? 'text-black bg-green-400 shadow-md' 
+                ? 'text-black bg-green shadow-md' 
                 : 'text-white hover:gradient-to-r from-green-400 to-green-500 hover:bg-white/5'
               }
               ${hoveredTab === tab.id ? 'scale-105' : 'scale-100'}
