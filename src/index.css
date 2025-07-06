@@ -3,7 +3,7 @@
 
 
 @theme {
-  --color-green: #00FA9A;
+  --color-green: #00FF40;
   --color-palegreen: #98FB98;
   --color-darkgray: #232429;
   --color-darkblue: #003153;
@@ -35,4 +35,53 @@
 /* Smooth transitions for all elements */
 * {
   transition: all 0.3s ease-in-out;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+}
+
+/* Glow effects */
+.shadow-react-glow {
+  box-shadow: 0 0 15px 5px rgba(97, 218, 251, 0.5);
+}
+.shadow-css-glow {
+  box-shadow: 0 0 15px 5px rgba(38, 77, 228, 0.5);
+}
+.shadow-html-glow {
+  box-shadow: 0 0 15px 5px rgba(228, 77, 38, 0.5);
+}
+.shadow-js-glow {
+  box-shadow: 0 0 15px 5px rgba(247, 223, 30, 0.5);
+}
+.shadow-ts-glow {
+  box-shadow: 0 0 15px 5px rgba(49, 120, 198, 0.5);
+}
+
+/* Hover glow effects */
+.hover-shadow-react-glow:hover {
+  box-shadow: 0 0 15px 5px rgba(97, 218, 251, 0.5);
+}
+.hover-shadow-css-glow:hover {
+  box-shadow: 0 0 15px 5px rgba(38, 77, 228, 0.5);
+}
+.hover-shadow-html-glow:hover {
+  box-shadow: 0 0 15px 5px rgba(228, 77, 38, 0.5);
+}
+.hover-shadow-js-glow:hover {
+  box-shadow: 0 0 15px 5px rgba(247, 223, 30, 0.5);
+}
+.hover-shadow-ts-glow:hover {
+  box-shadow: 0 0 15px 5px rgba(49, 120, 198, 0.5);
 }

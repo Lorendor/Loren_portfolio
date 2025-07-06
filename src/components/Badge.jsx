@@ -11,7 +11,7 @@ const Badge = () => {
         title="Croatia"
       >
         <img
-          src="src/assets/croatia.png"
+          src="/croatia.png"
           width="20"
           alt="Croatian Flag"
           className="h-7 w-12 object-cover rounded hover:scale-110 transition-all duration-300 shadow-lg"
