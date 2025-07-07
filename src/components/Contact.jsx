@@ -41,11 +41,11 @@ const Contact = () => {
     };
     
     return (
-        <div className="max-w-md mx-auto p-6 rounded-xl shadow-sm bg-darkgray/50 border border-white/20 ">
-            <h2 className="text-2xl font-bold mb-6 font-inter text-green">Send us a message</h2>
+        <div className="max-w-md mx-auto p-6 rounded-xl shadow-sm bg-gray-600/20 border border-white/20 ">
+            <h2 className="text-2xl font-bold mb-6 font-inter text-black dark:text-white">Send us a message</h2>
           
             {submitSuccess && (
-                <div className="mb-4 p-4 bg-green-100 text-green-700 rounded-lg">
+                <div className="mb-4 p-4 bg-green-100 text-green-300 rounded-lg">
                     Message sent successfully! We'll get back to you soon.
                 </div>
             )}
