@@ -29,7 +29,7 @@ const Marquee = () => {
   const repeatedWords = Array(20).fill(words).flat();
 
   return (
-    <div className="overflow-hidden w-full bg-transparent py-2">
+    <div className="overflow-hidden w-full bg-black py-2">
       <div
         ref={marqueeRef}
         className="flex whitespace-nowrap"
@@ -39,7 +39,7 @@ const Marquee = () => {
           <span
             key={idx}
             className={`mx-8 text-lg font-semibold ${
-              word === "Works" ? "text-palegreen" : "text-gray-300"
+              word === "Works" ? "text-green" : "text-gray-300"
             }`}
           >
             {word}

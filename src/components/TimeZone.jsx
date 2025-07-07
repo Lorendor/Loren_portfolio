@@ -42,22 +42,22 @@ const CroatiaTimezone = () => {
     >
       <div className="relative h-10 w-24 flex items-center justify-center">
         
-        <div className={`absolute inset-0 rounded-md bg-gradient-to-br ${isHovered ? 'bg-green' : 'bg-darkgray/50'} shadow-md transition-all duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`}></div>
+        <div className={`absolute inset-0 rounded-md bg-gradient-to-br ${isHovered ? 'bg-white dark:bg-darkgray/80' : 'bg-white dark:bg-darkgray'} shadow-md transition-all duration-500`}></div>
         
         <div className="relative z-10 text-center">
-          <div className={`text-xs font-bold ${isHovered ? 'text-black' : 'text-white/90'} transition-colors duration-300`}>
+          <div className={`text-xs font-bold ${isHovered ? 'text-purple dark:text-white' : 'text-black dark:text-gray-200'} transition-colors duration-300`}>
             {formatTime(currentTime)}
           </div>
-          <div className={`text-[0.6rem] ${isHovered ? 'text-black' : 'text-white/70'} transition-colors duration-300`}>
+          <div className={`text-[0.6rem] ${isHovered ? 'text-purple dark:text-white' : 'text-black dark:text-gray-300'} transition-colors duration-300`}>
             {formatDate(currentTime)}
           </div>
         </div>
         
-        <div className={`absolute inset-0 rounded-md border-2 ${isHovered ? 'border-black' : 'border-green'} transition-all duration-500`}></div>
+        <div className={`absolute inset-0 rounded-md border-2 ${isHovered ? 'border-black dark:border-white' : 'border-purple dark:border-purple-400'} transition-all duration-500`}></div>
       </div>
 
       <span className="text-white/80 text-sm"> - </span>
-      <span className="text-md font-medium hover:text-green-400 text-white transition-colors duration-300 group-hover:text-green-400">
+      <span className="text-md font-bold hover:text-purple text-black dark:text-white transition-colors duration-300 group-hover:text-purple">
         Dubrovnik, Croatia
       </span>
     </a>

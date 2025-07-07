@@ -40,7 +40,7 @@ const projects = [
 
 const App = () => {
   return (
-    <main className="bg-black">
+    <main className="bg-white dark:bg-darkgray">
       <div className="pb-5">
       <Navbar />
       </div>

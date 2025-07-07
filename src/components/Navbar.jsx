@@ -1,11 +1,33 @@
 import { useState, useRef, useEffect } from 'react';
+import MobileNavbar from './MobileNavbar';
+
+// Custom hook to detect mobile screen
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
+  return isMobile;
+};
 
 const Navbar = () => {
+  const isMobile = useIsMobile();
+
+  // Desktop hooks (always called)
   const [activeTab, setActiveTab] = useState('home');
   const [hoveredTab, setHoveredTab] = useState(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [tabPositions, setTabPositions] = useState({});
+  const [hoveredTabMouse, setHoveredTabMouse] = useState({ x: 0, y: 0 });
+  const [buttonRects, setButtonRects] = useState([]);
   const navRef = useRef(null);
+  const buttonRefs = useRef([]);
 
   const tabs = [
     { id: 'home', label: 'Home' },
@@ -15,89 +37,101 @@ const Navbar = () => {
     { id: 'contact', label: 'Contact' },
   ];
 
-  // Update tab positions on resize
   useEffect(() => {
-    const updateTabPositions = () => {
-      if (navRef.current) {
-        const positions = {};
-        const buttons = navRef.current.querySelectorAll('button');
-        buttons.forEach((button, index) => {
-          const rect = button.getBoundingClientRect();
-          positions[tabs[index].id] = {
-            x: rect.left + rect.width / 2,
-            y: rect.top + rect.height / 2,
-          };
-        });
-        setTabPositions(positions);
-      }
+    const updateRects = () => {
+      setButtonRects(
+        buttonRefs.current.map((ref) =>
+          ref ? ref.getBoundingClientRect() : null
+        )
+      );
     };
-
-    updateTabPositions();
-    window.addEventListener('resize', updateTabPositions);
-    return () => window.removeEventListener('resize', updateTabPositions);
+    updateRects();
+    window.addEventListener('resize', updateRects);
+    return () => window.removeEventListener('resize', updateRects);
   }, []);
 
-  // Handle mouse movement
-  const handleMouseMove = (e) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-  };
-
-  // Calculate transform style based on mouse position
-  const getTransformStyle = (tabId) => {
-    if (hoveredTab !== tabId || !tabPositions[tabId]) {
+  // Calculate 3D transform style based on mouse position relative to button
+  const getTransformStyle = (tabId, buttonRect) => {
+    if (hoveredTab !== tabId || !buttonRect) {
       return {
-        transform: 'translate(0px, 0px)',
-        transition: 'transform 0.3s ease-out',
+        transform: 'perspective(600px) translate(0px, 0px) rotateX(0deg) rotateY(0deg) scale(1)',
+        transition: 'transform 0.4s cubic-bezier(.25,.8,.25,1)',
       };
     }
 
-    const tabCenter = tabPositions[tabId];
-    const deltaX = mousePosition.x - tabCenter.x;
-    const deltaY = mousePosition.y - tabCenter.y;
-    
-    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-    const maxDistance = 200;
-    const moveDistance = Math.min(distance * 0.25, maxDistance);
-    
-    const directionX = deltaX / distance;
-    const directionY = deltaY / distance;
-    
-    const translateX = directionX * moveDistance;
-    const translateY = directionY * moveDistance;
+    // Mouse position relative to button center
+    const relX = hoveredTabMouse.x - buttonRect.width / 2;
+    const relY = hoveredTabMouse.y - buttonRect.height / 2;
+    // Normalize to [-1, 1] range
+    const normX = Math.max(-1, Math.min(1, relX / (buttonRect.width / 2)));
+    const normY = Math.max(-1, Math.min(1, relY / (buttonRect.height / 2)));
+    // Set max values
+    const maxRotate = 15; // degrees
+    const maxTranslate = 18; // px
+    // Calculate rotation and translation
+    const rotateY = normX * maxRotate;
+    const rotateX = -normY * maxRotate;
+    const translateX = normX * maxTranslate;
+    const translateY = normY * maxTranslate;
 
     return {
-      transform: `translate(${translateX}px, ${translateY}px)`,
-      transition: 'transform 0.2s ease-out',
+      transform: `perspective(600px) translate(${translateX}px, ${translateY}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.07)` ,
+      transition: 'transform 0.18s cubic-bezier(.25,.8,.25,1)',
+      zIndex: 2,
     };
   };
 
+  if (isMobile) {
+    return <MobileNavbar />;
+  }
+
+  // Desktop navbar (existing code)
   return (
     <nav 
       ref={navRef}
-      className="fixed bottom-8 md:bottom-8 left-1/2 transform -translate-x-1/2 px-3 md:px-6 py-1 rounded-full bg-black/30 backdrop-blur-md border border-white/10 z-50 shadow-xl"
-      onMouseMove={handleMouseMove}
+      className="fixed top-8 left-1/2 transform -translate-x-1/2 px-3 md:px-6 py-1 rounded-full bg-black/30 backdrop-blur-md border border-white/10 z-50 shadow-xl"
     >
-      <div className="flex justify-between items-center gap-4 md:gap-8 mx-auto py-1">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            onMouseEnter={() => setHoveredTab(tab.id)}
-            onMouseLeave={() => setHoveredTab(null)}
-            style={getTransformStyle(tab.id)}
-            className={`
-              relative flex flex-col items-center font-medium px-2 md:px-4 py-1 md:py-2 rounded-full 
-              transition-all duration-300 ease-out
-              ${activeTab === tab.id 
-                ? 'text-black bg-green shadow-md' 
-                : 'text-white hover:gradient-to-r from-green-400 to-green-500 hover:bg-white/5'
-              }
-              ${hoveredTab === tab.id ? 'scale-105' : 'scale-100'}
-            `}
-          >
-            <span className="text-md md:text-md whitespace-nowrap">{tab.label}</span>
-          </button>
-        ))}
+      <div className="flex items-center justify-between gap-2 md:gap-6 mx-auto py-1 w-full">
+        {/* Navbar buttons */}
+        <div className="flex justify-between items-center gap-4 md:gap-8">
+          {tabs.map((tab, idx) => (
+            <button
+              key={tab.id}
+              ref={el => buttonRefs.current[idx] = el}
+              onClick={() => setActiveTab(tab.id)}
+              onMouseEnter={(e) => {
+                setHoveredTab(tab.id);
+                if (buttonRects[idx]) {
+                  setHoveredTabMouse({
+                    x: e.clientX - buttonRects[idx].left,
+                    y: e.clientY - buttonRects[idx].top,
+                  });
+                }
+              }}
+              onMouseMove={(e) => {
+                if (buttonRects[idx]) {
+                  setHoveredTab(tab.id);
+                  setHoveredTabMouse({
+                    x: e.clientX - buttonRects[idx].left,
+                    y: e.clientY - buttonRects[idx].top,
+                  });
+                }
+              }}
+              onMouseLeave={() => setHoveredTab(null)}
+              style={getTransformStyle(tab.id, buttonRects[idx])}
+              className={`
+                relative flex flex-col items-center font-medium px-2 md:px-4 py-1 md:py-2 rounded-full 
+                transition-all duration-300 ease-out
+                ${activeTab === tab.id 
+                  ? 'text-white bg-purple shadow-md' 
+                  : 'text-white hover:bg-white/20'
+                }
+              `}
+            >
+              <span className="text-md md:text-md whitespace-nowrap">{tab.label}</span>
+            </button>
+          ))}
+        </div>
       </div>
     </nav>
   );

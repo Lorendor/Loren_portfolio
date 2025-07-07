@@ -30,10 +30,10 @@ export const AnimatedHeading = ({ phrases = ["Web Developer", "Designer", "Coder
   }, [text, isDeleting, loopNum, phrases, typingSpeed]);
 
   return (
-    <h1 className="text-4xl text-white md:text-5xl font-orbitron tracking-wider font-bold">
-      Hi I am Loren,<br></br>{' '}
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-green to-green-400">
-        <span className="inline-block min-w-[280px] md:min-w-[320px]">
+    <h1 className="text-4xl text-black dark:text-white md:text-5xl font-work-sans tracking-wider font-bold">
+      Hi I'm Loren,<br></br>{' '}
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple to-darkpurple">
+        <span className="whitespace-nowrap font-work-sans ">
           {text}
           <span className="border-r-2 border-white/50 pr-1"></span>
         </span>
