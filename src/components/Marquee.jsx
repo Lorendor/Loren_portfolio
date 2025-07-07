@@ -26,10 +26,10 @@ const Marquee = () => {
   }, []);
 
   // Repeat the words enough times for a seamless loop
-  const repeatedWords = Array(20).fill(words).flat();
+  const repeatedWords = Array(40).fill(words).flat();
 
   return (
-    <div className="overflow-hidden w-full bg-black py-2">
+    <div className="overflow-hidden w-full bg-darkgray dark:bg-white py-2">
       <div
         ref={marqueeRef}
         className="flex whitespace-nowrap"
@@ -39,7 +39,7 @@ const Marquee = () => {
           <span
             key={idx}
             className={`mx-8 text-lg font-semibold ${
-              word === "Works" ? "text-green" : "text-gray-300"
+              word === "Works" ? "text-purple" : "text-white dark:text-black"
             }`}
           >
             {word}

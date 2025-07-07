@@ -4,14 +4,13 @@
 
 
 @theme {
-  --color-green: #00FF40;
-  --color-palegreen: #000957;
+  
   --color-darkgray: #282b30;
   --color-white: #ffffff;
   --color-lightpurple: #cc33ff;
   --color-darkpurple: #730099;
   --color-purple:#c61aff;
-  --color-cream:#ffffe6;
+  --color-gray: #808080;
 
   --font-family-inter: "Inter", sans-serif;
   --font-family-work-sans: "Work Sans", sans-serif;

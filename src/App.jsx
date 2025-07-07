@@ -51,10 +51,7 @@ const App = () => {
       <div className="pt-30">
         <Marquee words={["About me", "Contact"]} />
       </div>
-      <div className="pt-10">
-        <Work projects={projects}/>
-      </div>
-      <div className="pt-10">
+      <div className="pt-50">
         <TechTree/>
       </div>
       <div className="pt-50">

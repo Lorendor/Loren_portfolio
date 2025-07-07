@@ -4,6 +4,7 @@ import Badge from './Badge'
 import TimeZone from './TimeZone' 
 import HeroPicture from './HeroPicture'
 import LightMod from './LightMod'
+import { social } from '../data/social.jsx'
 
 const Hero = () => {
   return (
@@ -41,6 +42,21 @@ const Hero = () => {
               Download CV
             </button>
           </div>
+          {/* Social icons under the buttons */}
+          <div className="flex space-x-14 pt-10 justify-center lg:justify-start">
+              {social.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-white hover:text-purple transition-colors"
+                >
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon className="h-8 w-8 hover:scale-110 transition-all duration-300 hover:text-purple " aria-hidden="true" />
+                </a>
+              ))}
+            </div>
         </div>
       </div>
     </div>

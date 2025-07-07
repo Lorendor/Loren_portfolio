@@ -3,7 +3,7 @@ import { techs } from '../data/techs.jsx'
 
 const TechTree = () => {
   return (
-    <div className="w-screen h-[40vh] overflow-hidden p-40 flex flex-col items-center justify-center gap-8 bg-darkgray">
+    <div className="w-screen h-[60vh] overflow-hidden p-40 flex flex-col items-center justify-center gap-8 bg-darkgray">
       <div className='flex flex-col items-center justify-center pt-5'>
         <h1 className='text-5xl font-bold text-green'>Tech Tree</h1>
       </div>
