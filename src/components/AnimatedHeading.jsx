@@ -32,7 +32,7 @@ export const AnimatedHeading = ({ phrases = ["Web Developer", "Designer", "Coder
   return (
     <h1 className="text-4xl text-black dark:text-white md:text-5xl font-work-sans tracking-wider font-bold">
       Hi I'm Loren,<br></br>{' '}
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple to-darkpurple">
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple to-darkpurple dark:from-purple dark:to-lightpurple">
         <span className="whitespace-nowrap font-work-sans ">
           {text}
           <span className="border-r-2 border-white/50 pr-1"></span>

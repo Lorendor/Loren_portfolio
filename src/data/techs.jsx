@@ -44,12 +44,6 @@ export const techs = [
     glow: 'hover:scale-110 hover-shadow-html-glow'
   },
   {
-    name: 'GitHub',
-    icon: 'devicon-github-original colored',
-    logo: <i className="devicon-github-original colored text-5xl"></i>,
-    glow: 'hover:scale-110 hover-shadow-html-glow'
-  },
-  {
     name: 'NPM',
     icon: 'devicon-npm-original-wordmark colored',
     logo: <i className="devicon-npm-original-wordmark colored text-5xl"></i>,
@@ -59,12 +53,6 @@ export const techs = [
     name: 'MySQL',
     icon: 'devicon-mysql-plain colored',
     logo: <i className="devicon-mysql-plain colored text-5xl"></i>,
-    glow: 'hover:scale-110 hover-shadow-js-glow'
-  },
-  {
-    name: 'Astro',
-    icon: 'devicon-astro-plain colored',
-    logo: <i className="devicon-astro-plain colored text-5xl"></i>,
     glow: 'hover:scale-110 hover-shadow-js-glow'
   },
   {

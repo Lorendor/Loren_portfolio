@@ -1,9 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 
-const words = ["Works", "Showcase"];
-
-const Marquee = () => {
+const Marquee = ({ words }) => {
   const marqueeRef = useRef(null);
 
   useEffect(() => {
@@ -25,8 +23,8 @@ const Marquee = () => {
     return () => ctx.revert();
   }, []);
 
-  // Repeat the words enough times for a seamless loop
-  const repeatedWords = Array(40).fill(words).flat();
+  // Repeat the words for loop
+  const repeatedWords = Array(80).fill(words).flat();
 
   return (
     <div className="overflow-hidden w-full bg-darkgray dark:bg-white py-2">
@@ -39,7 +37,7 @@ const Marquee = () => {
           <span
             key={idx}
             className={`mx-8 text-lg font-semibold ${
-              word === "Works" ? "text-purple" : "text-white dark:text-black"
+              idx % 2=== 1 ? "text-purple" : "text-white dark:text-black"
             }`}
           >
             {word}

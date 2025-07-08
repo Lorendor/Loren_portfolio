@@ -5,8 +5,9 @@
 
 @theme {
   
-  --color-darkgray: #282b30;
+  --color-darkgray: #111111; /*#252526*/
   --color-white: #ffffff;
+  --color-green: #00FF00;
   --color-lightpurple: #cc33ff;
   --color-darkpurple: #730099;
   --color-purple:#c61aff;

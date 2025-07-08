@@ -45,11 +45,15 @@ const App = () => {
       <Navbar />
       </div>
       <Hero />
-      <div className="pt-10">
+      <Marquee words={["About me", "Information"]}/>
+      <div>
         <AboutUs/>
       </div>
-      <div className="pt-30">
+      <div>
         <Marquee words={["About me", "Contact"]} />
+      </div>
+      <div>
+        <Work/>
       </div>
       <div className="pt-50">
         <TechTree/>
