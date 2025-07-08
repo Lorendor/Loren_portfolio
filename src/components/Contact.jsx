@@ -41,11 +41,11 @@ const Contact = () => {
     };
     
     return (
-        <div className="max-w-md mx-auto p-6 rounded-xl shadow-sm bg-gray-600/20 border border-white/20 ">
-            <h2 className="text-2xl font-bold mb-6 font-inter text-black dark:text-white">Send us a message</h2>
+        <div className="max-w-md mx-auto p-6 rounded-xl shadow-sm bg-white dark:bg-darkgray border border-gray/20 ">
+            <h2 className="text-2xl font-bold mb-6 font-inter text-darkgray dark:text-white">Send me a message</h2>
           
             {submitSuccess && (
-                <div className="mb-4 p-4 bg-green-100 text-green-300 rounded-lg">
+                <div className="mb-4 p-4 bg-green-100 text-darkgray rounded-lg">
                     Message sent successfully! We'll get back to you soon.
                 </div>
             )}
@@ -59,14 +59,14 @@ const Contact = () => {
                 />
                 
                 <div className="relative">
-                    <label htmlFor="name" className="block text-sm font-medium text-green mb-1">Full Name</label>
-                    <div className="flex items-center border border-gray-300 rounded-lg p-3 hover:border-gray-400 transition-colors">
+                    <label htmlFor="name" className="block text-sm font-medium text-darkgray dark:text-white mb-1">Full Name</label>
+                    <div className="flex items-center border border-gray-300 rounded-lg p-3 hover:border-purple transition-colors">
                        
                         <input
                             type="text"
                             id="name"
                             name="name"
-                            className="w-full focus:outline-none text-green"
+                            className="w-full focus:outline-none text-darkgray dark:text-white"
                             placeholder="Enter your full name"
                             required
                         />
@@ -74,14 +74,14 @@ const Contact = () => {
                 </div>
 
                 <div className="relative">
-                    <label htmlFor="email" className="block text-sm font-medium  text-green mb-1">Email Address</label>
-                    <div className="flex items-center border border-gray-300 rounded-lg p-3 hover:border-gray-400 transition-colors">
+                    <label htmlFor="email" className="block text-sm font-medium  text-darkgray dark:text-white mb-1">Email Address</label>
+                    <div className="flex items-center border border-gray-300 rounded-lg p-3 hover:border-purple transition-colors">
                         
                         <input
                             type="email"
                             id="email"
                             name="email"
-                            className="w-full focus:outline-none text-green"
+                            className="w-full focus:outline-none text-darkgray dark:text-white"
                             placeholder="Enter your email"
                             required
                         />
@@ -89,13 +89,13 @@ const Contact = () => {
                 </div>
 
                 <div className="relative">
-                    <label htmlFor="message" className="block text-sm font-medium text-green mb-1">Your Message</label>
-                    <div className="flex items-start border border-gray-300 rounded-lg p-3 hover:border-gray-400 transition-colors">
+                    <label htmlFor="message" className="block text-sm font-medium text-darkgray dark:text-white mb-1">Your Message</label>
+                    <div className="flex items-start border border-gray-300 rounded-lg p-3 hover:border-purple transition-colors">
                        
                         <textarea
                             id="message"
                             name="message"
-                            className="w-full focus:outline-none text-green resize-none"
+                            className="w-full focus:outline-none text-darkgray dark:text-white resize-none"
                             rows="4"
                             placeholder="Write your message!"
                             required
@@ -108,8 +108,8 @@ const Contact = () => {
                 <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full flex items-center justify-center bg-black text-white py-3 px-4 rounded-lg font-medium transition-colors ${
-                        isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-black/50'
+                    className={`w-full flex items-center justify-center bg-darkgray dark:bg-white text-white dark:text-darkgray  py-3 px-4 rounded-lg font-medium transition-colors ${
+                        isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-purple hover:text-black dark:hover:text-white'
                     }`}
                 >
                     {isSubmitting ? (

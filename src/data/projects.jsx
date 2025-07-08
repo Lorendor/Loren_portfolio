@@ -13,11 +13,13 @@ export const projects = [
   },
   {
     image: "/projekt2.JPG",
-    title: "Project Two",
-    description: "This is a description of Project Two.",
+    title: "Movie App",
+    description: "Movie app that helps users find trending movies and check their ratings and details. It is a project I made as a part of JavaScript Mastery course by Adrian Hajdin. This project taught me how to use React, with Appwrite as a backend.",
     techs: [
       { name: "React", icon: "devicon-react-original" },
-      { name: "Node.js", icon: "devicon-nodejs-plain" },
+      { name: "Tailwind", icon: "devicon-tailwindcss-plain" },
+      { name: "Appwrite", icon: "devicon-appwrite-plain" },
+      
     ],
     github: "https://github.com/yourusername/project-two"
   },

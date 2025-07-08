@@ -50,7 +50,7 @@ const App = () => {
         <AboutUs/>
       </div>
       <div>
-        <Marquee words={["About me", "Contact"]} />
+        <Marquee words={["My work", "Check out"]} />
       </div>
       <div>
         <Work/>
@@ -58,10 +58,13 @@ const App = () => {
       <div className="pt-50">
         <TechTree/>
       </div>
+      <div>
+        <Marquee words={["Let's talk", "Contact me"]} />
+      </div>
       <div className="pt-50">
         <Contact/>
       </div>
-      <div className="pt-50 pb-30">
+      <div className="pt-50">
         <Footer/>
       </div>
     </main>

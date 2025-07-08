@@ -11,7 +11,7 @@ const Marquee = ({ words }) => {
 
       gsap.to(marquee, {
         x: -totalWidth,
-        duration: 10,
+        duration: 30,
         ease: "linear",
         repeat: -1,
         modifiers: {
@@ -24,7 +24,7 @@ const Marquee = ({ words }) => {
   }, []);
 
   // Repeat the words for loop
-  const repeatedWords = Array(80).fill(words).flat();
+  const repeatedWords = Array(40).fill(words).flat();
 
   return (
     <div className="overflow-hidden w-full bg-darkgray dark:bg-white py-2">

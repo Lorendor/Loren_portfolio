@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
         {/* Text content */}
         <div className='text-center lg:text-left max-w-xl w-full px-2 sm:px-0'>
-          <AnimatedHeading phrases={["Frontend Developer", "UI Designer", "React Developer"]} />
+          <AnimatedHeading phrases={["Frontend Developer", "UI/UX Designer", "React Developer"]} />
           <p className='text-black dark:text-white text-base font-medium sm:text-lg mt-4 sm:mt-6 leading-relaxed'>
             I develop visually appealing and user-friendly websites with a strong focus on accessibility, responsiveness and performance.
           </p>
