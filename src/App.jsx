@@ -7,66 +7,59 @@ import TechTree from './components/TechTree'
 import AboutUs from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-
-const projects = [
-  {
-    title: "Tours Service",
-    description: "Project for a taxi service that organizes tours around Croatia.",
-    image: "public/projekt1.jpg",
-    links: [
-      { text: "View", url: "https://malamaretours.com", isButton: false },
-      { text: "GitHub", url: "https://github.com/Lorendor/Tours", isButton: true }
-    ]
-  },
-  {
-    title: "Movie App",
-    description: "Movie app that allows you to search for trending movies and see their ratings.",
-    image: "public/projekt2.jpg",
-    links: [
-      { text: "Play Game", url: "https://game.example.com", isButton: true },
-      { text: "GitHub", url: "https://github.com/yourusername/clicker", isButton: false }
-    ]
-  },
-  {
-    title: "Cocktail bar site",
-    description: "Fully GSAP animated cocktail bar site.",
-    image: "public/projekt3.jpg",
-    links: [
-      { text: "View App", url: "https://croatia.example.com", isButton: false },
-      { text: "GitHub", url: "https://github.com/Lorendor/Cocktail_site", isButton: false }
-    ]
-  }
-];
+import ScrollTopButton from './components/ScrollTopButton'
 
 const App = () => {
   return (
     <main className="bg-white dark:bg-darkgray">
       <div className="pb-5">
-      <Navbar />
+        <Navbar />
       </div>
-      <Hero />
-      <Marquee words={["About me", "Information"]}/>
-      <div>
-        <AboutUs/>
-      </div>
-      <div>
-        <Marquee words={["My work", "Check out"]} />
-      </div>
-      <div>
-        <Work/>
-      </div>
-      <div className="pt-50">
-        <TechTree/>
-      </div>
-      <div>
-        <Marquee words={["Let's talk", "Contact me"]} />
-      </div>
-      <div className="pt-50">
-        <Contact/>
-      </div>
+      
+      {/* Home Section */}
+      <section id="home">
+        <Hero />
+      </section>
+      
+      {/* About Section */}
+      <section id="about">
+        <Marquee words={["About me", "Information"]}/>
+        <div>
+          <AboutUs/>
+        </div>
+      </section>
+      
+      {/* Work Section */}
+      <section id="work">
+        <div>
+          <Marquee words={["My work", "Check out"]} />
+        </div>
+        <div>
+          <Work/>
+        </div>
+      </section>
+      
+      {/* Skills Section */}
+      <section id="skills">
+        <div className="pt-50">
+          <TechTree/>
+        </div>
+      </section>
+      
+      {/* Contact Section */}
+      <section id="contact">
+        <div>
+          <Marquee words={["Let's talk", "Contact me"]} />
+        </div>
+        <div className="pt-50">
+          <Contact/>
+        </div>
+      </section>
+      
       <div className="pt-50">
         <Footer/>
       </div>
+      <ScrollTopButton />
     </main>
   )
 }

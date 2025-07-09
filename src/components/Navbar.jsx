@@ -37,6 +37,43 @@ const Navbar = () => {
     { id: 'contact', label: 'Contact' },
   ];
 
+  // Smooth scroll to section
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 100; // Account for fixed navbar
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Scroll spy functionality
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = tabs.map(tab => document.getElementById(tab.id));
+      const scrollPosition = window.scrollY + 150; // Offset for navbar
+
+      sections.forEach((section, index) => {
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            setActiveTab(tabs[index].id);
+          }
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   useEffect(() => {
     const updateRects = () => {
       setButtonRects(
@@ -98,7 +135,10 @@ const Navbar = () => {
             <button
               key={tab.id}
               ref={el => buttonRefs.current[idx] = el}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => {
+                setActiveTab(tab.id);
+                scrollToSection(tab.id);
+              }}
               onMouseEnter={(e) => {
                 setHoveredTab(tab.id);
                 if (buttonRects[idx]) {
@@ -121,7 +161,7 @@ const Navbar = () => {
               style={getTransformStyle(tab.id, buttonRects[idx])}
               className={`
                 relative flex flex-col items-center font-medium px-2 md:px-4 py-1 md:py-2 rounded-full 
-                transition-all duration-300 ease-out
+                transition-all duration-300 ease-out cursor-pointer
                 ${activeTab === tab.id 
                   ? 'text-white bg-purple shadow-md' 
                   : 'text-white hover:bg-white/20'
