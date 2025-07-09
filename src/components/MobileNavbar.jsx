@@ -14,7 +14,16 @@ const MobileNavbar = () => {
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
-    /*setIsMenuOpen(false);*/ //Closing menu on tab click
+    setIsMenuOpen(false); // Close menu on tab click
+    
+    // Smooth scroll to the section
+    const element = document.getElementById(tabId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   };
   return (
     <>

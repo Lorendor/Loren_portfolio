@@ -24,6 +24,10 @@
   font-weight: 700;
   letter-spacing: 2px;
 }
+.font-inter {
+  font-family: "Inter", sans-serif !important;
+}
+
 
 /* Custom animations */
 @keyframes spin-slow {

@@ -21,7 +21,7 @@ const useIsMobile = () => {
 const Navbar = () => {
   const isMobile = useIsMobile();
 
-  // Desktop hooks (always called)
+  // Desktop hooks
   const [activeTab, setActiveTab] = useState('home');
   const [hoveredTab, setHoveredTab] = useState(null);
   const [hoveredTabMouse, setHoveredTabMouse] = useState({ x: 0, y: 0 });
@@ -33,7 +33,7 @@ const Navbar = () => {
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'work', label: 'Work' },
-    { id: 'skills', label: 'Skills' },
+    { id: 'experience', label: 'Experience' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -41,7 +41,7 @@ const Navbar = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 100; // Account for fixed navbar
+      const offset = 100;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -122,7 +122,6 @@ const Navbar = () => {
     return <MobileNavbar />;
   }
 
-  // Desktop navbar (existing code)
   return (
     <nav 
       ref={navRef}

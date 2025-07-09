@@ -3,7 +3,6 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Marquee from './components/Marquee'
 import Work from './components/Work'
-import TechTree from './components/TechTree'
 import AboutUs from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -25,7 +24,7 @@ const App = () => {
       <section id="about">
         <Marquee words={["About me", "Information"]}/>
         <div>
-          <AboutUs/>
+          <AboutUs/> 
         </div>
       </section>
       
@@ -36,13 +35,6 @@ const App = () => {
         </div>
         <div>
           <Work/>
-        </div>
-      </section>
-      
-      {/* Skills Section */}
-      <section id="skills">
-        <div className="pt-50">
-          <TechTree/>
         </div>
       </section>
       

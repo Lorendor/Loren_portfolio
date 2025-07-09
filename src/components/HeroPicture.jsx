@@ -31,7 +31,7 @@ const HeroPicture = () => {
         })}
 
         {/* Hero Image */}
-        <div className="absolute inset-6 sm:inset-8 bg-gradient-to-br from-purple to-lightpurple dark:from-darkgray dark:to-purple rounded-full flex items-center justify-center border-4 border-green-400/20 dark:border-purple-400/40 shadow-2xl overflow-hidden">
+        <div className="absolute inset-6 sm:inset-8 bg-gradient-to-br from-purple to-lightpurple dark:from-darkgray dark:to-purple rounded-full flex items-center justify-center border-4 border-darkpurple dark:border-purple-400/40 overflow-hidden">
           <img
             src="/profile.jpg"
             alt="Profile"
