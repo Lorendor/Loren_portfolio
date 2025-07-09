@@ -1,19 +1,17 @@
 import React from 'react'
-import { AnimatedHeading } from './AnimatedHeading'
-import Badge from './Badge'
-import TimeZone from './TimeZone' 
-import HeroPicture from './HeroPicture'
-import LightMod from './LightMod'
+import { AnimatedHeading } from './ui/AnimatedHeading.jsx'
+import Badge from './ui/Badge.jsx'
+import TimeZone from './ui/TimeZone.jsx' 
+import HeroPicture from './ui/HeroPicture.jsx'
+import LightMod from './ui/LightMod.jsx'
 import { social } from '../data/social.jsx'
 
 const Hero = () => {
   return (
     <div className='flex flex-col items-center justify-center min-h-screen relative overflow-hidden bg-white dark:bg-darkgray px-2 sm:px-4'>
-      {/* Mobile: LightMod in top right */}
       <div className=' top-4 right-4'>
         <LightMod />
       </div>
-      {/* Top left and right overlays for large screens */}
       <div className="hidden lg:flex w-full absolute top-0 left-0 z-20 justify-between px-8 pt-6 pointer-events-none">
         <div className="pointer-events-auto">
           <TimeZone />
@@ -22,9 +20,8 @@ const Hero = () => {
           <Badge />
         </div>
       </div>
-      {/* Main content container */}
+      {/* Main container */}
       <div className='flex flex-col-reverse lg:flex-row items-center justify-center gap-8 sm:gap-12 z-10 relative w-full pt-24 sm:pt-32'>
-        {/* Hero image on the left for large screens */}
         <div className='flex justify-center items-center w-full lg:w-auto'>
           <HeroPicture />
         </div>
@@ -42,7 +39,7 @@ const Hero = () => {
               Download CV
             </button>
           </div>
-          {/* Social icons under the buttons */}
+          {/* Social icons */}
           <div className="flex space-x-14 pt-10 justify-center lg:justify-start">
               {social.map((item) => (
                 <a

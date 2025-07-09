@@ -4,7 +4,7 @@ import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const About = () => {
   return (
-    <div className='w-full h-screen  bg-white dark:bg-darkgray flex flex-col items-center justify-center'>
+    <div className='w-70% h-70%  bg-white dark:bg-darkgray flex flex-col items-center justify-center'>
       <div className="code-display items-center justify-center pt-20 pb-20 w-100px">
         <SyntaxHighlighter language="jsx" style={dracula} customStyle={{ fontSize: '1.5rem',margin: '0',padding: '2rem',height: '100%',width: '100%',borderRadius: '20px',
           backgroundColor: '#darkgray',backdropFilter: 'blur(10px)',border: '1px solid rgba(255,255,255,0.1)',marginBottom: '20px'}}>

@@ -1,11 +1,11 @@
 import React from 'react';
-import { techs } from '../data/techs.jsx';
+import { techs } from '../../data/techs.jsx';
 
 const HeroPicture = () => {
   return (
     <div className="relative mb-10 lg:mb-0">
       <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-90 md:h-90 mx-auto">
-        {/* Orbiting Tech Icons */}
+        {/* Orbiting Icons */}
         {techs.map((tech, index) => {
           const angle = (index / techs.length) * 360;
           const radius = 110;

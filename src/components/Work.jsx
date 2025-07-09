@@ -1,11 +1,11 @@
 import React from 'react'
-import FlipCard from './FlipCard'
+import FlipCard from './ui/FlipCard'
 import { projects } from '../data/projects'
 
 const Work = () => {
   return (
     <div className='w-full min-h-screen bg-white dark:bg-darkgray flex flex-col items-center justify-center py-20'>
-      <h1 className='text-4xl font-work-sans text-black dark:text-white mb-10'>Work</h1>
+      <h1 className='text-5xl font-work-sans text-black dark:text-white mb-30'>Check out my work</h1>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4'>
         {projects.map((project, index) => (
           <FlipCard
