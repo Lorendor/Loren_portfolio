@@ -6,10 +6,9 @@ export const projects = [
     techs: [
       { name: "React", icon: "devicon-react-original" },
       { name: "Tailwind", icon: "devicon-tailwindcss-plain" },
-      // add more as needed
     ],
     website: "https://malamaretours.com",
-    github: "https://github.com/yourusername/project-one"
+    github: "https://github.com/Lorendor/Tours"
   },
   {
     image: "/projekt2.JPG",
@@ -21,7 +20,18 @@ export const projects = [
       { name: "Appwrite", icon: "devicon-appwrite-plain" },
       
     ],
-    github: "https://github.com/yourusername/project-two"
+    github: "https://github.com/Lorendor/MovieApp"
   },
-  // ...more projects
+  {
+    image: "/projekt3.JPG",
+    title: "GSAP Cocktail Site",
+    description: "Animated cocktail site that helps users choose a cocktail and see the ingredients and instructions. It is a project I made as a part of JavaScript Mastery course by Adrian Hajdin. This project taught me how to use GSAP for animations.",
+    techs: [
+      { name: "React", icon: "devicon-react-original" },
+      { name: "Tailwind", icon: "devicon-tailwindcss-plain" },
+      { name: "GSAP", icon: "public/gsap-icon.svg" },
+      
+    ],
+    github: "https://github.com/Lorendor/Cocktail_site"
+  },
 ];

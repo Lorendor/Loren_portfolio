@@ -21,7 +21,7 @@ const ScrollTopButton = () => {
     return (
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-6 right-6 z-50 bg-black dark:bg-white hover:bg-purple text-white dark:text-black p-3 rounded-full shadow-lg transition-all duration-300"
+        className="fixed bottom-6 right-6 z-50 bg-darkgray dark:bg-white hover:bg-purple text-white dark:text-darkgray p-3 rounded-full shadow-lg transition-all duration-300"
         aria-label="Scroll to top"
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">

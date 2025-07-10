@@ -19,11 +19,21 @@ const Work = () => {
                 />
                 <div className="flex items-start pt-10 space-x-4">
                   {project.techs.map((tech, techIndex) => (
-                    <i 
-                      key={techIndex}
-                      className={`${tech.icon} colored text-5xl`}
-                      title={tech.name}
-                    ></i>
+                    tech.icon.startsWith('public/') ? (
+                      <img
+                        key={techIndex}
+                        src={tech.icon.replace('public/', '/')}
+                        alt={tech.name}
+                        className="w-12 h-12 object-contain"
+                        title={tech.name}
+                      />
+                    ) : (
+                      <i 
+                        key={techIndex}
+                        className={`${tech.icon} colored text-5xl`}
+                        title={tech.name}
+                      ></i>
+                    )
                   ))}
                 </div>
               </div>
