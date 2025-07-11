@@ -18,11 +18,10 @@ const Footer = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          {/* Brand info */}
           <div className="space-y-8 xl:col-span-1">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Y</span>
+                <span className="text-white font-bold text-xl">L</span>
               </div>
               <span className="dark:text-white text-darkgray text-xl font-semibold">Loren Bjelokosic</span>
             </div>

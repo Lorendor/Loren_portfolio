@@ -32,7 +32,7 @@ const About = () => {
         {/* Role */}
         <div className="py-6">
           <span className="block text-xs uppercase tracking-wider text-darkgray dark:text-gray-400 mb-2">Role</span>
-          <span className="font-semibold text-lg text-purple dark:text-darkpurple">Frontend Developer, React Developer</span>
+          <span className="font-semibold text-lg text-purple dark:text-purple">Frontend Developer, React Developer</span>
         </div>
 
         {/* Degree */}

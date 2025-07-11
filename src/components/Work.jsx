@@ -4,8 +4,9 @@ import { projects } from '../data/projects'
 
 const Work = () => {
   return (
-    <div className='w-full min-h-screen bg-white dark:bg-darkgray flex flex-col items-center justify-center py-20'>
-      <h1 className='text-5xl font-work-sans text-black dark:text-white mb-30'>Check out my work</h1>
+    <div className='w-full min-h-screen bg-white dark:bg-darkgray flex flex-col items-center justify-center py-50 pt-50'>
+      <h1 className='text-5xl font-inter font-bold text-black dark:text-white mb-6'>Check out my work</h1>
+      <div className="w-40 h-1.5 bg-gradient-to-r from-purple to-darkpurple rounded-full mx-auto mb-30"></div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4'>
         {projects.map((project, index) => (
           <FlipCard

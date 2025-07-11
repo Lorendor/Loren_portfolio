@@ -8,20 +8,18 @@ export default function ExperienceSection() {
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-16">
-      <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between mb-12 gap-4">
-        <div className="text-center sm:text-left flex items-center gap-4">
-          <h2 className="text-4xl font-bold text-darkgray dark:text-white mb-0">
-            {showEducation ? 'Education' : 'Professional Experience'}
-          </h2>
-          <button
-            className="ml-2 px-4 py-2 rounded-full bg-purple text-white font-medium shadow-md hover:bg-purple/80 transition-all"
-            onClick={() => setShowEducation((prev) => !prev)}
-            aria-label="Swap section"
-          >
-            {showEducation ? 'Show Experience' : 'Show Education'}
-          </button>
-        </div>
-        <div className="w-24 h-1 bg-purple mx-auto sm:mx-0 rounded-full mt-4 sm:mt-0"></div>
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-darkgray dark:text-white mb-6">
+          {showEducation ? 'Education' : 'Professional Experience'}
+        </h2>
+        <div className="w-40 h-1.5 bg-gradient-to-r from-purple to-darkpurple rounded-full mx-auto mb-6"></div>
+        <button
+          className="px-4 py-2 rounded-full bg-purple text-white font-medium shadow-md hover:bg-purple/80 transition-all"
+          onClick={() => setShowEducation((prev) => !prev)}
+          aria-label="Swap section"
+        >
+          {showEducation ? 'Show Experience' : 'Show Education'}
+        </button>
       </div>
 
       {showEducation ? (

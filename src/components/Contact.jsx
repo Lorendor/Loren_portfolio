@@ -61,7 +61,7 @@ const Contact = () => {
                 
                 <div className="relative">
                     <label htmlFor="name" className="block text-sm font-medium text-darkgray dark:text-white mb-1">Full Name</label>
-                    <div className="flex items-center border border-gray-300 rounded-lg p-3 hover:border-purple/20 hover:shadow-purple/30 transition-colors">
+                    <div className="flex items-center border border-gray-300 rounded-lg p-3 hover:border-purple/50 hover:shadow-purple/30 transition-colors">
                        
                         <input
                             type="text"
@@ -76,7 +76,7 @@ const Contact = () => {
 
                 <div className="relative">
                     <label htmlFor="email" className="block text-sm font-medium  text-darkgray dark:text-white mb-1">Email Address</label>
-                    <div className="flex items-center border border-gray-300 rounded-lg p-3 hover:border-purple/20 hover:shadow-purple/30 transition-colors">
+                    <div className="flex items-center border border-gray-300 rounded-lg p-3 hover:border-purple/50 hover:shadow-purple/30 transition-colors">
                         
                         <input
                             type="email"
@@ -91,7 +91,7 @@ const Contact = () => {
 
                 <div className="relative">
                     <label htmlFor="message" className="block text-sm font-medium text-darkgray dark:text-white mb-1">Your Message</label>
-                    <div className="flex items-start border border-gray-300 rounded-lg p-3 hover:border-purple/20 hover:shadow-purple/30 transition-colors">
+                    <div className="flex items-start border border-gray-300 rounded-lg p-3 hover:border-purple/50 hover:shadow-purple/30 transition-colors">
                        
                         <textarea
                             id="message"
@@ -109,7 +109,7 @@ const Contact = () => {
                 <button
                     type="submit"
                     disabled={isSubmitting}
-                                         className={`w-full flex items-center justify-center border bg-white dark:bg-darkgray text-darkgray border-purple shadow-purple dark:text-white dark:border-purple/20 dark:shadow-purple py-3 px-4 rounded-lg font-medium transition-colors ${
+                                         className={`w-full flex items-center justify-center border bg-white dark:bg-darkgray text-darkgray border-purple shadow-purple dark:text-white dark:border-purple/50 dark:shadow-purple py-3 px-4 rounded-lg font-medium transition-colors ${
                         isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-purple hover:text-white dark:hover:text-white'
                     }`}
                 >

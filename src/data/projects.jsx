@@ -6,6 +6,7 @@ export const projects = [
     techs: [
       { name: "React", icon: "devicon-react-original" },
       { name: "Tailwind", icon: "devicon-tailwindcss-plain" },
+      { name: "GSAP", icon: "public/gsap-icon.svg" },
     ],
     website: "https://malamaretours.com",
     github: "https://github.com/Lorendor/Tours"
