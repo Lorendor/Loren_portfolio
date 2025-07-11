@@ -6,9 +6,10 @@ const Footer = () => {
   const navigation = {
     main: [
       { name: 'Home', href: '#home' },
-      { name: 'Projects', href: '/projects' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Contact', href: '/contact' },
+      { name: 'About', href: '#about' },
+      { name: 'Work', href: '#work' },
+      { name: 'Experience', href: '#experience' },
+      { name: 'Contact', href: '#contact' },
     ],
   };
 

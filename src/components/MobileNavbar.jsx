@@ -4,7 +4,7 @@ const tabs = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'work', label: 'Work' },
-  { id: 'skills', label: 'Skills' },
+  { id: 'experience', label: 'Experience' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -46,11 +46,11 @@ const MobileNavbar = () => {
         />
       )}
 
-      {/* Mobile Menu with slide-down animation and glass gray background */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <nav className="fixed top-0 left-0 right-0 p-0 pt-0 z-50 animate-slideDown">
           <div className="mx-4 mt-4 rounded-2xl shadow-2xl bg-black/30 backdrop-blur-md border border-white/10 overflow-hidden">
-            {/* Header with logo/site name and close button */}
+            {/* Header */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-black/30 backdrop-blur-md">
               <span className="font-bold text-lg text-white tracking-wide">Loren's Portfolio</span>
               <button

@@ -15,6 +15,8 @@ export const EducationInfo = [
       duration: "February 2024 - May 2024",
       description: [
         "Learned about react and advanced javascript and css.",
+        "Learned about version control with git and github.",
+        "Learned about responsive design and how to make websites responsive.",
       ]
     },
     {
@@ -23,6 +25,8 @@ export const EducationInfo = [
       duration: "May 2025 - June 2025",
       description: [
         "Followed a course on javascript and react to improve my skills.",
+        "Got intoruced to gsap animations and how to use them.",
+        "Learned about how to use tailwind css and how to use it to style websites.",
         "Created multiple projects as part of the course program.",
       ]
     }

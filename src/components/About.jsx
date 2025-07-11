@@ -1,39 +1,108 @@
-import React from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import React from 'react';
+import { techs } from '../data/techs';
 
 const About = () => {
   return (
-    <div className='w-70% h-70%  bg-white dark:bg-darkgray flex flex-col items-center justify-center'>
-      <div className="code-display items-center justify-center pt-20 pb-20 w-100px">
-        <SyntaxHighlighter language="jsx" style={dracula} customStyle={{ fontSize: '1.5rem',margin: '0',padding: '2rem',height: '100%',width: '100%',borderRadius: '20px',
-          backgroundColor: '#darkgray',backdropFilter: 'blur(10px)',border: '1px solid rgba(255,255,255,0.1)',marginBottom: '20px'}}>
-          {`
-          const aboutMe = {
-            name: "Loren Bjelokosić",
-            age: 25,
-            city: "Dubrovnik",
-            role: "Frontend Developer","React Developer",
-            degree: "Bachelor of Computer Science and programming"
-            stacks: [
-              "HTML", "CSS", "JavaScript", "TypeScript", "React", "Node.js", "Git", "NPM", "MySQL", "GSAP"
-              ],
-            hobbies: [
-              "Coding","Gaming", "Diving", "Swimming", "Training","Cooking"
-            ],
-            goals: [
-              "To improve my skills","To travel the world","To stop drinking coffee",
-            ],
-            contact: {
-              email: "lorenbjelokosic1@gmail.com",
-              number: "+385 99 599 1780",
-            },
-          }
-          `}
-        </SyntaxHighlighter>
+    <div className="w-full max-w-2xl mx-auto p-6 md:p-8 bg-white dark:bg-darkgray rounded-2xl shadow-lg border border-gray-100 dark:border-purple/20 mt-8">
+      {/* Header */}
+      <div className="text-center mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-darkgray dark:text-white mb-3">About Me</h2>
+        <div className="w-24 h-1.5 bg-gradient-to-r from-purple to-darkpurple rounded-full mx-auto"></div>
+      </div>
+
+      <div className="space-y-8 divide-y divide-gray-200 dark:divide-purple/20">
+        {/* Personal Info */}
+        <div className="pb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4  dark:bg-darkgray/50 p-4 rounded-xl">
+            <div className="space-y-1 p-3 bg-white dark:bg-darkgray/80 rounded-lg shadow-sm border border-transparent hover:border-purple/20 hover:shadow-purple/30 transition-all duration-300">
+              <span className="block text-xs uppercase tracking-wider text-darkgray dark:text-gray-400">Name</span>
+              <span className="font-medium text-lg text-darkgray dark:text-white">Loren Bjelokosić</span>
+            </div>
+            <div className="space-y-1 p-3 bg-white dark:bg-darkgray/80 rounded-lg shadow-sm border border-transparent hover:border-purple/20 hover:shadow-purple/30 transition-all duration-300">
+              <span className="block text-xs uppercase tracking-wider text-darkgray dark:text-gray-400">Age</span>
+              <span className="font-medium text-lg text-darkgray dark:text-white">25</span>
+            </div>
+            <div className="space-y-1 p-3 bg-white dark:bg-darkgray/80 rounded-lg shadow-sm border border-transparent hover:border-purple/20 hover:shadow-purple/30 transition-all duration-300">
+              <span className="block text-xs uppercase tracking-wider text-darkgray dark:text-gray-400">City</span>
+              <span className="font-medium text-lg text-darkgray dark:text-white">Dubrovnik</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Role */}
+        <div className="py-6">
+          <span className="block text-xs uppercase tracking-wider text-darkgray dark:text-gray-400 mb-2">Role</span>
+          <span className="font-semibold text-lg text-purple dark:text-darkpurple">Frontend Developer, React Developer</span>
+        </div>
+
+        {/* Degree */}
+        <div className="py-6">
+          <span className="block text-xs uppercase tracking-wider text-darkgray dark:text-gray-400 mb-2">Degree</span>
+          <div className="p-4 bg-gray-100 dark:bg-darkgray/50 rounded-lg border-l-4 border-purple">
+            <span className="font-medium text-darkgray dark:text-white">Bachelor of Computer Science and programming</span>
+          </div>
+        </div>
+
+        {/* Tech Stack */}
+        <div className="py-6">
+          <span className="block text-xs uppercase tracking-wider text-darkgray dark:text-gray-400 mb-3">Tech Stack</span>
+            <div className="flex flex-wrap gap-3">
+              {techs.map((tech) => (
+                <span key={tech.name} className="px-3 py-1.5 bg-purple/10 hover:bg-purple/20 transition-colors text-purple rounded-full text-sm font-medium">
+                  {tech.name}
+                </span>
+              ))}
+            </div>
+        </div>
+
+        {/* Hobbies */}
+        <div className="py-6">
+          <span className="block text-xs uppercase tracking-wider text-darkgray dark:text-gray-400 mb-3">Hobbies</span>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {['Coding','Gaming','Diving','Swimming','Training','Cooking'].map((hobby) => (
+              <div key={hobby} className="p-3 bg-white dark:bg-darkgray/80 rounded-lg shadow-sm border border-gray-100 hover:border-purple/20 hover:shadow-purple/30 transition-colors dark:border-purple/10">
+                <span className="font-medium text-darkgray dark:text-white">{hobby}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Goals */}
+        <div className="py-6">
+          <span className="block text-xs uppercase tracking-wider text-darkgray dark:text-gray-400 mb-3">Goals</span>
+          <div className="space-y-3">
+            <div className="flex items-start p-3 bg-gray-50 dark:bg-darkgray/50 rounded-lg">
+              <span className="text-purple mr-3 text-lg">•</span>
+              <span className="text-darkgray dark:text-white">To improve my skills</span>
+            </div>
+            <div className="flex items-start p-3 bg-gray-50 dark:bg-darkgray/50 rounded-lg">
+              <span className="text-purple mr-3 text-lg">•</span>
+              <span className="text-darkgray dark:text-white">To travel the world</span>
+            </div>
+            <div className="flex items-start p-3 bg-gray-50 dark:bg-darkgray/50 rounded-lg">
+              <span className="text-purple mr-3 text-lg">•</span>
+              <span className="text-darkgray dark:text-white">To stop drinking coffee</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact */}
+        <div className="pt-6">
+          <span className="block text-xs uppercase tracking-wider text-darkgray dark:text-gray-400 mb-3">Contact</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="p-4 bg-white dark:bg-darkgray/80 rounded-lg shadow-sm border border-gray-100 dark:border-purple/10">
+              <span className="block text-sm text-gray-500 dark:text-gray-400 mb-1">Email</span>
+              <a href="mailto:lorenbjelokosic1@gmail.com" className="text-purple font-medium hover:underline">lorenbjelokosic1@gmail.com</a>
+            </div>
+            <div className="p-4 bg-white dark:bg-darkgray/80 rounded-lg shadow-sm border border-gray-100 dark:border-purple/10">
+              <span className="block text-sm text-gray-500 dark:text-gray-400 mb-1">Phone</span>
+              <a href="tel:+385995991780" className="text-purple font-medium hover:underline">+385 99 599 1780</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

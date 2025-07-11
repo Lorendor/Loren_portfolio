@@ -34,4 +34,17 @@ export const projects = [
     ],
     github: "https://github.com/Lorendor/Cocktail_site"
   },
+  {
+    image: "/projekt4.JPG",
+    title: "Loren Portfolio",
+    description: "The very page you are on right now. I made this portfolio to showcase my skills,projects and experience in web development hoping to land a job in the field.",
+    techs: [
+      { name: "React", icon: "devicon-react-original" },
+      { name: "Tailwind", icon: "devicon-tailwindcss-plain" },
+      
+      
+    ],
+    website: "https://lorenbjelokosic.com",
+    github: "https://github.com/Lorendor/Loren_Portfolio"
+  },
 ];

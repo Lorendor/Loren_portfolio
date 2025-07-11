@@ -62,7 +62,7 @@ const Work = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center text-white hover:text-black"
+                    className="flex items-center justify-center text-white hover:text-black pt-2"
                   >
                     <i className="devicon-github-original text-3xl mr-2"></i>
                     View on GitHub

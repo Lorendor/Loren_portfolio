@@ -56,9 +56,9 @@ export const techs = [
     glow: 'hover:scale-110 hover-shadow-js-glow'
   },
   {
-    name: 'GSAP',
-    icon: '/gsap-icon.svg',
-    logo: <img src="/gsap-icon.svg" alt="GSAP" className="w-10 h-10 transition-all duration-300" />,
-    glow: 'hover:scale-110 hover:shadow-lg hover:shadow-green-700'
+    name: 'Python',
+    icon: 'devicon-python-plain colored',
+    logo: <i className="devicon-python-plain colored text-5xl"></i>,
+    glow: 'hover:scale-110 hover-shadow-js-glow'
   },
 ]; 

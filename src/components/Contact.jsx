@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitSuccess, setSubmitSuccess] = useState(false);
+    const [result, setResult] = React.useState("");
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -41,7 +42,7 @@ const Contact = () => {
     };
     
     return (
-        <div className="w-96 mx-auto p-6 rounded-xl shadow-sm bg-white dark:bg-darkgray border border-purple/20 shadow-purple/30 ">
+        <div className="w-100 mx-auto p-8 rounded-xl shadow-sm bg-white dark:bg-darkgray border border-gray-100">
             <h2 className="text-2xl font-bold mb-6 font-inter text-darkgray dark:text-white">Send me a message</h2>
           
             {submitSuccess && (
@@ -108,8 +109,8 @@ const Contact = () => {
                 <button
                     type="submit"
                     disabled={isSubmitting}
-                                         className={`w-full flex items-center justify-center border bg-white dark:bg-darkgray text-darkgray border-purple shadow-purple dark:text-white dark:border-purple/20 dark:shadow-purple/30 py-3 px-4 rounded-lg font-medium transition-colors ${
-                        isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-purple hover:text-black dark:hover:text-white'
+                                         className={`w-full flex items-center justify-center border bg-white dark:bg-darkgray text-darkgray border-purple shadow-purple dark:text-white dark:border-purple/20 dark:shadow-purple py-3 px-4 rounded-lg font-medium transition-colors ${
+                        isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-purple hover:text-white dark:hover:text-white'
                     }`}
                 >
                     {isSubmitting ? (
