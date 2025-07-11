@@ -3,7 +3,7 @@ import { techs } from '../data/techs';
 
 const About = () => {
   return (
-    <div className="w-full max-w-2xl mx-auto p-6 md:p-8 bg-white dark:bg-darkgray rounded-2xl shadow-lg border border-gray-100 dark:border-purple/20 mt-8">
+    <div className="w-full max-w-2xl mx-auto p-6 md:p-8 bg-white dark:bg-darkgray rounded-2xl shadow-lg border border-gray-100 dark:border-purple/20 mt-30">
       {/* Header */}
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-darkgray dark:text-white mb-3">About Me</h2>
