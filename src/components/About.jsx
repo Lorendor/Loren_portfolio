@@ -94,10 +94,6 @@ const About = () => {
               <span className="block text-sm text-gray-500 dark:text-gray-400 mb-1">Email</span>
               <a href="mailto:lorenbjelokosic1@gmail.com" className="text-purple font-medium hover:underline">lorenbjelokosic1@gmail.com</a>
             </div>
-            <div className="p-4 bg-white dark:bg-darkgray/80 rounded-lg shadow-sm border border-gray-100 dark:border-purple/10">
-              <span className="block text-sm text-gray-500 dark:text-gray-400 mb-1">Phone</span>
-              <a href="tel:+385995991780" className="text-purple font-medium hover:underline">+385 99 599 1780</a>
-            </div>
           </div>
         </div>
       </div>
