@@ -10,7 +10,7 @@ import Experience from './components/Experience'
 
 const App = () => {
   return (
-    <main className="bg-white dark:bg-darkgray">
+    <main className="bg-white dark:bg-darkgray overflow-x-hidden">
 
       <div className="pb-5">
         <Navbar />

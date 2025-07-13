@@ -32,9 +32,9 @@ const Hero = () => {
             I develop visually appealing and user-friendly websites with a strong focus on accessibility, responsiveness and performance.
           </p>
           <div className='flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center lg:justify-start'>
-            <button className='px-6 sm:px-8 py-3 bg-purple text-white rounded-full font-semibold hover:bg-white dark:hover:bg-darkgray hover:text-black dark:hover:text-white border-purple border-2 hover:border-purple transition-all duration-300 transform hover:scale-105 text-sm sm:text-base'>
+            <a href="mailto:lorenbjelokosic1@gmail.com" className='px-6 sm:px-8 py-3 bg-purple text-white rounded-full font-semibold hover:bg-white dark:hover:bg-darkgray hover:text-black dark:hover:text-white border-purple border-2 hover:border-purple transition-all duration-300 transform hover:scale-105 text-sm sm:text-base inline-block'>
               Hire me
-            </button>
+            </a>
             <button className='px-6 sm:px-8 py-3 border-2 border-purple text-black dark:text-white rounded-full font-semibold hover:border-purple/40 hover:text-white hover:bg-purple transition-all duration-300 text-sm sm:text-base'>
               Download CV
             </button>

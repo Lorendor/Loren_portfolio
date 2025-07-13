@@ -24,9 +24,9 @@ export const EducationInfo = [
       role: "Web development course",
       duration: "May 2025 - June 2025",
       description: [
-        "Followed a course on javascript and react to improve my skills.",
-        "Got intoruced to gsap animations and how to use them.",
-        "Learned about how to use tailwind css and how to use it to style websites.",
+        "Followed a course on JavaScript and React to improve my skills.",
+        "Got intoruced to GSAP animations and how to use them.",
+        "Learned about how to use TailwindCSS and how to use it to style websites.",
         "Created multiple projects as part of the course program.",
       ]
     }

@@ -17,7 +17,7 @@ export const techs = [
     logo: <i className="devicon-javascript-plain colored text-5xl"></i>,
   },
   {
-    name: 'Typescript',
+    name: 'TypeScript',
     icon: 'devicon-typescript-plain colored',
     logo: <i className="devicon-typescript-plain colored text-5xl"></i>,
   },
@@ -27,7 +27,7 @@ export const techs = [
     logo: <i className="devicon-react-original colored text-5xl"></i>,
   },
   {
-    name: 'Tailwind',
+    name: 'TailwindCSS',
     icon: 'devicon-tailwindcss-plain colored',
     logo: <i className="devicon-tailwindcss-plain colored text-5xl"></i>,
   },

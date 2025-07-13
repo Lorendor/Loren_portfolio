@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation links */}
-          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
             <div>
               <h3 className="text-sm font-semibold text-darkgray dark:text-white tracking-wider uppercase">
                 Navigation
@@ -70,7 +70,7 @@ const Footer = () => {
               <ul className="mt-4 space-y-4">
                 <li>
                   <a
-                    href="mailto:hello@example.com"
+                    href="mailto:lorenbjelokosic1@gmail.com"
                     className="text-base text-darkgray dark:text-white hover:text-purple transition-colors"
                   >
                     lorenbjelokosic1@gmail.com
