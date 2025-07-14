@@ -32,7 +32,7 @@ export const ExperienceInfo = [
     {
       company: "Ivan Gundulić School, Dubrovnik ",
       role: "Volunteer Python & Web Development Instructor",
-      duration: "January 2022 - May 2022",
+      duration: "November 2024",
       description: [
         "Taught two 2-hour classes introducing elementary school students to Python programming and basic web development concepts.",
         "Developed simple, engaging lessons to make coding accessible and fun for young learners.",

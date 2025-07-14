@@ -39,7 +39,7 @@ const About = () => {
         <div className="py-6">
           <span className="block text-xs uppercase tracking-wider text-darkgray dark:text-gray-400 mb-2">Degree</span>
           <div className="p-4 bg-gray-100 dark:bg-darkgray/50 rounded-lg border-l-4 border-purple">
-            <span className="font-medium text-darkgray dark:text-white">Bachelor of Computer Science and programming</span>
+            <span className="font-medium text-darkgray dark:text-white">Bachelor of Computer Science and Programming</span>
           </div>
         </div>
 
@@ -73,7 +73,7 @@ const About = () => {
           <div className="space-y-3">
             <div className="flex items-start p-3 bg-gray-50 dark:bg-darkgray/50 rounded-lg">
               <span className="text-purple mr-3 text-lg">•</span>
-              <span className="text-darkgray dark:text-white">To improve my skills</span>
+              <span className="text-darkgray dark:text-white">To become better developer</span>
             </div>
             <div className="flex items-start p-3 bg-gray-50 dark:bg-darkgray/50 rounded-lg">
               <span className="text-purple mr-3 text-lg">•</span>
@@ -81,7 +81,7 @@ const About = () => {
             </div>
             <div className="flex items-start p-3 bg-gray-50 dark:bg-darkgray/50 rounded-lg">
               <span className="text-purple mr-3 text-lg">•</span>
-              <span className="text-darkgray dark:text-white">To stop drinking coffee</span>
+              <span className="text-darkgray dark:text-white">To master new technologies</span>
             </div>
           </div>
         </div>
