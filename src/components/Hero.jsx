@@ -36,7 +36,7 @@ const Hero = () => {
               Hire me
             </a>
             <a
-              href="public/Loren Bjelokosić.pdf"
+              href="/Loren Bjelokosić.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className='px-6 sm:px-8 py-3 border-2 border-purple text-black dark:text-white rounded-full font-semibold hover:border-purple/40 hover:text-white hover:bg-purple transition-all duration-300 text-sm sm:text-base flex items-center justify-center'
