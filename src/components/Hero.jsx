@@ -35,9 +35,14 @@ const Hero = () => {
             <a href="mailto:lorenbjelokosic1@gmail.com" className='px-6 sm:px-8 py-3 bg-purple text-white rounded-full font-semibold hover:bg-white dark:hover:bg-darkgray hover:text-black dark:hover:text-white border-purple border-2 hover:border-purple transition-all duration-300 transform hover:scale-105 text-sm sm:text-base inline-block'>
               Hire me
             </a>
-            <button className='px-6 sm:px-8 py-3 border-2 border-purple text-black dark:text-white rounded-full font-semibold hover:border-purple/40 hover:text-white hover:bg-purple transition-all duration-300 text-sm sm:text-base'>
+            <a
+              href="public/Loren Bjelokosić.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className='px-6 sm:px-8 py-3 border-2 border-purple text-black dark:text-white rounded-full font-semibold hover:border-purple/40 hover:text-white hover:bg-purple transition-all duration-300 text-sm sm:text-base flex items-center justify-center'
+            >
               Download CV
-            </button>
+            </a>
           </div>
           {/* Social icons */}
           <div className="flex space-x-14 pt-10 justify-center lg:justify-start">
