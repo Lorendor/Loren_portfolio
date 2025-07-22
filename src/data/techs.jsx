@@ -47,8 +47,8 @@ export const techs = [
     logo: <i className="devicon-mysql-plain colored text-5xl"></i>,
   },
   {
-    name: 'Python',
-    icon: 'devicon-python-plain colored',
-    logo: <i className="devicon-python-plain colored text-5xl"></i>,
+    name: 'PHP',
+    icon: 'devicon-php-plain colored',
+    logo: <i className="devicon-php-plain colored text-5xl"></i>,
   },
 ]; 
