@@ -10,9 +10,29 @@ export const ExperienceInfo = [
       ]
     },
     {
+      company: "Outsource Project",
+      role: "Laravel Developer",
+      duration: "June 2024 - March 2025",
+      description: [
+        "Worked part-time with two colleagues on an outsourced project to build a fully functional multi-tenant CRM.",
+        "We launched the first version to customers just three months into development.",
+        "My contributions included backend and UI work using Laravel, Filament, and Livewire.",
+      ]
+    },
+     {
+      company: "Ivan Gundulić School, Dubrovnik ",
+      role: "Volunteer Python & Web Development Instructor",
+      duration: "November 2024",
+      description: [
+        "Taught two 2-hour classes introducing elementary school students to Python programming and basic web development concepts.",
+        "Developed simple, engaging lessons to make coding accessible and fun for young learners.",
+        "Encouraged problem-solving skills and creative thinking through hands-on coding activities",
+      ]
+    },
+    {
       company: "Adriatic Luxury Hotels",
       role: "IT Support",
-      duration: "February 2025 - June 2025",
+      duration: "February 2024 - June 2024",
       description: [
         "Provided technical support for hotel staff, resolving hardware and software issues",
         "Maintained stable network connectivity and supported daily operations by resolving technical issues",
@@ -29,14 +49,4 @@ export const ExperienceInfo = [
         "Created a backend for the website using PHP and MySQL.",
       ]
     },
-    {
-      company: "Ivan Gundulić School, Dubrovnik ",
-      role: "Volunteer Python & Web Development Instructor",
-      duration: "November 2024",
-      description: [
-        "Taught two 2-hour classes introducing elementary school students to Python programming and basic web development concepts.",
-        "Developed simple, engaging lessons to make coding accessible and fun for young learners.",
-        "Encouraged problem-solving skills and creative thinking through hands-on coding activities",
-      ]
-    }
   ];

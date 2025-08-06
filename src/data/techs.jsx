@@ -32,6 +32,11 @@ export const techs = [
     logo: <i className="devicon-tailwindcss-plain colored text-5xl"></i>,
   },
   {
+    name: 'Laravel',
+    icon: 'devicon-laravel-plain colored',
+    logo: <i className="devicon-laravel-plain colored text-5xl"></i>,
+  },
+  {
     name: 'Git',
     icon: 'devicon-git-plain colored',
     logo: <i className="devicon-git-plain colored text-5xl"></i>,
@@ -51,4 +56,14 @@ export const techs = [
     icon: 'devicon-php-plain colored',
     logo: <i className="devicon-php-plain colored text-5xl"></i>,
   },
-]; 
+  {
+    name: 'Livewire',
+    icon: 'devicon-livewire-plain colored',
+    logo: <i className="devicon-livewire-plain colored text-5xl"></i>,
+  },
+  {
+    name: 'Filament',
+    icon: 'devicon-filament-plain colored',
+    logo: <i className="devicon-filament-plain colored text-5xl"></i>,
+  },
+];
