@@ -48,4 +48,16 @@ export const projects = [
     website: "https://lorenbjelokosic.com",
     github: "https://github.com/Lorendor/Loren_Portfolio"
   },
+  {
+    image: "/projekt5.png",
+    title: "Jobs Platform",
+    description: "Developed a Laravel-based jobs platform , featuring job listings, a tagging system, and highlighted featured jobs. Implemented a relational SQL database to manage postings, tags, and search functionality efficiently.",
+    techs: [
+      { name: "Laravel", icon: "devicon-laravel-plain colored" },
+      { name: "Tailwind", icon: "devicon-tailwindcss-plain" },
+      
+      
+    ],
+    github: "https://github.com/Lorendor/Loren_Portfolio"
+  },
 ];

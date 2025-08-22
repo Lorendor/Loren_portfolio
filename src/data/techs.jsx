@@ -57,6 +57,11 @@ export const techs = [
     logo: <i className="devicon-php-plain colored text-5xl"></i>,
   },
   {
+    name: 'Inertia.Js',
+    icon: 'devicon-intertia-plain colored',
+    logo: <i className="devicon-git-plain colored text-5xl"></i>,
+  },
+  {
     name: 'Livewire',
     icon: 'devicon-livewire-plain colored',
     logo: <i className="devicon-livewire-plain colored text-5xl"></i>,
