@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+  
+  --color-darkgray: #111111; /*#252526*/
+  --color-white: #ffffff;
+  --color-green: #00FF00;
+  --color-lightpurple: #cc33ff;
+  --color-darkpurple: #730099;
+  --color-purple:#c61aff;
+  --color-gray: #808080;
+
+  --font-family-inter: "Inter", sans-serif;
+  --font-family-work-sans: "Work Sans", sans-serif;
+  
+
+}
+
+.font-work-sans {
+  font-family: "Work Sans", monospace !important;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.font-inter {
+  font-family: "Inter", sans-serif !important;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(110px) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(110px) rotate(-360deg);
+  }
+}
+.animate-orbit {
+  animation: orbit 20s linear infinite;
+}
