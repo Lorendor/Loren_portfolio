@@ -7,6 +7,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollTopButton from './components/ui/ScrollTopButton'
 import Experience from './components/Experience'
+import Projects from './components/Projects'
 
 const App = () => {
   return (
@@ -31,9 +32,15 @@ const App = () => {
           <Work/>
         </div>
       </section>
+
+       <section id="projects">
+        <div>
+          <Projects/>
+        </div>
+      </section>
       
       <section id="experience">
-        <div>
+        <div className="pt-30">
           <Experience/>
         </div>
       </section>

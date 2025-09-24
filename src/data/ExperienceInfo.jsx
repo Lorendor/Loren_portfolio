@@ -4,9 +4,9 @@ export const ExperienceInfo = [
       role: "Fullstack Developer",
       duration: "March 2025 - Present",
       description: [
-        "I have being working as a freelancer for 2 years now.",
-        "Personal freelance web development service focused on creating modern, responsive websites for local businesses.",
-        "I mostly use React and Tailwind CSS and host websites on Vercel.",
+        "Founded a freelance web development service dedicated to building modern, responsive websites and custom web applications for local businesses.",
+        "Technical expertise includes developing client-side solutions with React and Tailwind CSS, as well as full-stack applications using Laravel for features like reservation systems.",
+        "All applications are professionally hosted and maintained",
       ]
     },
     {
@@ -21,7 +21,7 @@ export const ExperienceInfo = [
     {
       company: "Outsource Project",
       role: "Laravel Developer",
-      duration: "September2024 - December 2024",
+      duration: "September 2024 - December 2024",
       description: [
         "Worked part-time with two colleagues on an outsourced project to build a fully functional multi-tenant CRM.",
         "We launched the first version to customers just three months into development.",
@@ -36,7 +36,7 @@ export const ExperienceInfo = [
         "Developed responsive websites using HTML, CSS, and JavaScript.",
         "Built clean, user-friendly interfaces and translated designs into code.",
         "Collaborated with designers to ensure smooth UI/UX experiences.",
-        "Focused on performance, accessibility, and modern web standards.",
+        "Optimized websites for maximum speed and scalability across various devices and platforms.",
       ]
     },
 

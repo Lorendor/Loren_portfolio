@@ -27,16 +27,16 @@ const Hero = () => {
         </div>
         {/* Text content */}
         <div className='text-center lg:text-left max-w-xl w-full px-2 sm:px-0'>
-          <AnimatedHeading phrases={["Fullstack Developer", "Laravel Developer"]} />
+          <AnimatedHeading phrases={["Fullstack Developer", "Laravel Enthusiast"]} />
           <p className='text-black dark:text-white text-base font-medium sm:text-lg mt-4 sm:mt-6 leading-relaxed'>
-            I develop visually appealing and user-friendly websites with a strong focus on accessibility, responsiveness and performance.
+            I develop full-stack web applications with solid backend systems and clean frontend interfaces, focusing on fast loading, mobile-friendly design, and great user experience.
           </p>
           <div className='flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center lg:justify-start'>
             <a href="mailto:lorenbjelokosic1@gmail.com" className='px-6 sm:px-8 py-3 bg-purple text-white rounded-full font-semibold hover:bg-white dark:hover:bg-darkgray hover:text-black dark:hover:text-white border-purple border-2 hover:border-purple transition-all duration-300 transform hover:scale-105 text-sm sm:text-base inline-block'>
               Hire me
             </a>
             <a
-              href="/Loren_Bjelokosić.pdf"
+              href="/LB_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className='px-6 sm:px-8 py-3 border-2 border-purple text-black dark:text-white rounded-full font-semibold hover:border-purple/40 hover:text-white hover:bg-purple transition-all duration-300 text-sm sm:text-base flex items-center justify-center'

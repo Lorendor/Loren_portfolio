@@ -1,7 +1,24 @@
 import React from 'react';
-import { techs } from '../data/techs';
+import { techs } from '../data/techs'; // Make sure this path is correct
 
 const About = () => {
+  // Group techs by category from your imported techs data
+  const groupedTechs = techs.reduce((acc, tech) => {
+    if (!acc[tech.category]) {
+      acc[tech.category] = [];
+    }
+    acc[tech.category].push(tech);
+    return acc;
+  }, {});
+
+  // Define category order and labels
+  const categoryOrder = ['frontend', 'backend', 'tools'];
+  const categoryLabels = {
+    frontend: 'Frontend',
+    backend: 'Backend', 
+    tools: 'Tools'
+  };
+
   return (
     <div className="w-full max-w-2xl mx-auto p-6 md:p-8 bg-white dark:bg-darkgray rounded-2xl shadow-lg border border-gray-100 dark:border-purple/20 mt-30">
       {/* Header */}
@@ -32,7 +49,7 @@ const About = () => {
         {/* Role */}
         <div className="py-6">
           <span className="block text-xs uppercase tracking-wider text-darkgray dark:text-gray-400 mb-2">Role</span>
-          <span className="p-4 font-semibold text-lg text-purple dark:text-purple">Fullstack Developer, Laravel Developer</span>
+          <span className="p-4 font-semibold text-lg text-purple dark:text-purple">Fullstack Developer</span>
         </div>
 
         {/* Degree */}
@@ -43,16 +60,30 @@ const About = () => {
           </div>
         </div>
 
-        {/* Tech Stack */}
+        {/* Tech Stack - Grouped */}
         <div className="py-6">
-          <span className="block text-xs uppercase tracking-wider text-darkgray dark:text-gray-400 mb-3">Tech Stack</span>
-            <div className="flex flex-wrap gap-3">
-              {techs.map((tech) => (
-                <span key={tech.name} className="px-3 py-1.5 bg-purple/10 hover:bg-purple/20 transition-colors text-purple rounded-full text-sm font-medium">
-                  {tech.name}
-                </span>
-              ))}
-            </div>
+          <span className="block text-xs uppercase tracking-wider text-darkgray dark:text-gray-400 mb-4">Tech Stack</span>
+          <div className="space-y-6">
+            {categoryOrder.map((category) => (
+              groupedTechs[category] && (
+                <div key={category} className="space-y-3">
+                  <span className="block text-sm font-medium text-purple dark:text-purple">
+                    {categoryLabels[category]}
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {groupedTechs[category].map((tech) => (
+                      <span 
+                        key={tech.name} 
+                        className="px-3 py-1.5 bg-purple/10 hover:bg-purple/20 transition-colors text-purple rounded-full text-sm font-medium"
+                      >
+                        {tech.name}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )
+            ))}
+          </div>
         </div>
 
         {/* Hobbies */}

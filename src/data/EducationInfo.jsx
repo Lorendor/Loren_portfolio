@@ -4,9 +4,21 @@ export const EducationInfo = [
       role: "Bachelor of Computer Science and programming",
       duration: "2019 - 2023",
       description: [
-        "Got bachelor's degree in Computer Science and programming.",
-        "Had a chance to learn a lot of different programming languages and technologies.",
-        "Learned a lot about web development and created multiple websites."
+        "Completed comprehensive curriculum in software engineering principles and web technologies",
+        "Core coursework: Object-Oriented Programming, Data Structures & Algorithms, Database Systems, Web Development, Software Engineering, Operating Systems",
+        "Advanced topics: Artificial Intelligence, Machine Learning, Computer Networks, Cloud Computing, Mobile Application Development",
+        "Programming languages: Java, Python, C#, HTML, CSS, JavaScript, PHP, MySQL",
+        "Graduated with focus on full-stack web development and modern software architecture"
+      ]
+    },
+     {
+      company: "JavaScript Mastery",
+      role: "Web development course",
+      duration: "January 2025",
+      description: [
+        "Followed a course on JavaScript and React to improve my skills.",
+        "Got introduced to advanced concepts of DevOps and fullstack development.",
+        "Created multiple projects as part of the course program.",
       ]
     },
     {
@@ -19,14 +31,4 @@ export const EducationInfo = [
         "Learned about responsive design and how to make websites responsive.",
       ]
     },
-    {
-      company: "Javacript Mastery",
-      role: "Web development course",
-      duration: "January 2025",
-      description: [
-        "Followed a course on JavaScript and React to improve my skills.",
-        "Got intoruced to GSAP animations and how to use them.",
-        "Created multiple projects as part of the course program.",
-      ]
-    }
   ];
