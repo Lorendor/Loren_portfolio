@@ -9,25 +9,6 @@ export const ExperienceInfo = [
         "All applications are professionally hosted and maintained",
       ]
     },
-    {
-      company: "Adriatic Luxury Hotels",
-      role: "IT Support",
-      duration: "March 2025 - June 2025",
-      description: [
-        "Provided technical support for hotel staff, resolving hardware and software issues",
-        "Maintained stable network connectivity and supported daily operations by resolving technical issues",
-      ]
-    },
-    {
-      company: "Outsource Project",
-      role: "Laravel Developer",
-      duration: "September 2024 - December 2024",
-      description: [
-        "Worked part-time with two colleagues on an outsourced project to build a fully functional multi-tenant CRM.",
-        "We launched the first version to customers just three months into development.",
-        "My contributions included backend and UI work using Laravel, Filament, and Livewire.",
-      ]
-    },
      {
       company: "Studio Beluga",
       role: "Frontend Developer",

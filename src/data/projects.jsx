@@ -60,4 +60,15 @@ export const projects = [
     ],
     github: "https://github.com/Lorendor/Loren_Portfolio"
   },
+  {
+    image: "/slika7.JPG",
+    title: "Cleaning service",
+    description: "Website for a cleaning service in Croatia. It is a project I made for a local business startup.Made with React, used react-router for routing and Tailwind CSS for styling.",
+    techs: [
+      { name: "React", icon: "devicon-react-original" },
+      { name: "Tailwind", icon: "devicon-tailwindcss-plain" },
+      
+    ],
+    github: "https://github.com/Lorendor/CleanBros"
+  },
 ];
