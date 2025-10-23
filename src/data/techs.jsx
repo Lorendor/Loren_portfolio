@@ -32,12 +32,6 @@ export const techs = [
     category: 'frontend'
   },
   {
-    name: 'Vue.js',
-    icon: 'devicon-vuejs-plain colored',
-    logo: <i className="devicon-vuejs-plain colored text-5xl"></i>,
-    category: 'frontend'
-  },
-  {
     name: 'TailwindCSS',
     icon: 'devicon-tailwindcss-plain colored',
     logo: <i className="devicon-tailwindcss-plain colored text-5xl"></i>,
@@ -78,12 +72,6 @@ export const techs = [
     icon: 'devicon-inertia-plain colored',
     logo: <i className="devicon-inertia-plain colored text-5xl"></i>,
     category: 'tools'
-  },
-  {
-    name: 'Livewire',
-    icon: 'devicon-livewire-plain colored',
-    logo: <i className="devicon-livewire-plain colored text-5xl"></i>,
-    category: 'frontend' 
   },
   {
     name: 'Filament',
